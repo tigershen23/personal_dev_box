@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine.
   config.vm.network :forwarded_port, guest: 3000, host: 3000 # rails default
   config.vm.network :forwarded_port, guest: 5001, host: 5000 # flask/python 
+  config.vm.network :forwarded_port, guest: 4000, host: 4000 # jekyll
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
