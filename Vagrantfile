@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network :private_network, ip: "1.2.3.4"
+  config.vm.network :private_network, ip: "1.2.3.5"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
 
   # FOR WINDOWS: REMOVE NFS => TRUE. Windows does not support NFS mounts at this time
-  config.vm.synced_folder "../code", "/home/vagrant/code", :nfs => true, :create => true
+  config.vm.synced_folder "../code/", "/home/vagrant/code", type: 'nfs', :create => true
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
