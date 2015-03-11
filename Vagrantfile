@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
     # vb.customize ["modifyvm", :id, "--memory", "2048"]
     # set ram to 2g, 4 cpus, ioapic on (require for multiple cpus)
     vb.customize ["modifyvm", :id, "--memory", "4096", "--cpus", "4", "--ioapic", "on"]
-    vb.name = "personal_dev"
+    vb.name = "tiger_dev"
   end
 
   # FOR WINDOWS: change this to vmware_workstation if you intend on using VMWare
